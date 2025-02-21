@@ -167,7 +167,7 @@ class controller extends GetxController{
 
       // Close the interpreter to free resources
       interpreter.close();
-
+   // below code will go to animations
       Get.to(Animation());
 
 

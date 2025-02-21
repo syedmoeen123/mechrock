@@ -178,23 +178,28 @@ class controller extends GetxController{
   }
 
 
-  void get_largest(){
+  void get_largest() {
+    // Initialize variables to track the index of the largest value and the largest value itself
+    int index = 0;          // Start with the first index
+    double largest = out[0]; // Assume the first element is the largest
 
-    int index=0;
-    double largest=out[0];
-    for (int i=0;i<out.length;i++){
-
-      if(largest < out[i]){
-        largest=out[i];
-        index=i;
+    // Loop through the 'out' array to find the largest value
+    for (int i = 0; i < out.length; i++) {
+      // Check if the current element is larger than the current 'largest' value
+      if (largest < out[i]) {
+        largest = out[i]; // Update 'largest' with the new maximum value
+        index = i;        // Update 'index' to the position of the new maximum value
       }
-
     }
 
-    title.value=labels[index];
-    print(title.value);
-    update();
+    // Set the 'title.value' to the label corresponding to the largest value
+    title.value = labels[index];
 
+    // Print the value of 'title.value' for debugging or logging purposes
+    print(title.value);
+
+    // Call the 'update' function to refresh or update the display
+    update();
   }
 
 
